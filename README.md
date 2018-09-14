@@ -36,6 +36,9 @@ Next, since Devise-Two-Factor encrypts its secrets before storing them in the da
          :otp_secret_encryption_key => ENV['YOUR_ENCRYPTION_KEY_HERE']
 
 ```
+For Rails > 5 the key YOUR_ENCRYPTION_KEY_HERE must be longer than 32 bytes. You can safely generate a new key using 
+`ROTP::Base32.random_base32(32)`
+
 
 Finally, you can automate all of the required setup by simply running:
 
